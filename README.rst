@@ -1,1 +1,85 @@
-# This is my README
+
+Introduction
+************
+ 
+This is the reporsitory of my Fabric and Salt configuration. 
+
+Notable features :
+
+* Debian packaging : update/list/upgrade
+* Salt : minion setup
+* EncFS : private dir mount/umount/backup
+* Fabric custom decorators
+
+Requirements 
+************
+ 
+This code has been run and tested on Python 2.7.
+
+Master Deps 
+===========
+ 
+* Fabric
+* FabTools for package requirement
+ 
+Slaves Deps
+===========
+ 
+* Git
+* Salt
+* EtcKeeper
+* Denyhosts
+
+Installation
+************
+ 
+Install requirements::
+ 
+  pip -e requirement.txt
+ 
+Start using::
+ 
+  fab -l
+
+Tests 
+*****
+ 
+Salt config can be run in dry-run mode.
+More to come.
+
+More Information 
+****************
+ 
+* GitHub : http://github.com/aert/aert_devops
+* Documentation : https://github.com/aert/aert_devops/wiki
+ 
+API Documentation
+=================
+ 
+Task list are available through Fabric::
+ 
+  fab -l
+ 
+TODO : Salt doc
+
+Example Usage
+*************
+ 
+The following shows how to list available updates from remote server::
+ 
+  fab h_remoteserver apt.update
+  fab h_remoteserver apt.list
+
+License 
+*******
+ 
+This project is licensed under the MIT license.
+
+Support 
+*******
+ 
+Users looking for support should file an issue on the GitHub issue tracking page (https://github.com/aert/aert_devops/issues), or file a pull request (https://github.com/myuser/aert_devops/pulls) if you have a fix available.
+
+Those who wish to contribute directly to the project can contact me at <devaert@gmail.com> to talk about getting repository access granted.
+
+
