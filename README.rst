@@ -52,8 +52,8 @@ More to come.
 More Information 
 ****************
  
-* GitHub : http://github.com/aert/aert_devops
-* Documentation : https://github.com/aert/aert_devops/wiki
+* GitHub : http://github.com/aert/aert-devops
+* Documentation : https://github.com/aert/aert-devops/wiki
  
 API Documentation
 =================
@@ -80,8 +80,8 @@ This project is licensed under the MIT license.
 Support 
 *******
  
-* Issue Tracking : https://github.com/aert/aert_devops/issues
-* Pull Request : https://github.com/aert/aert_devops/pulls
+* Issue Tracking : https://github.com/aert/aert-devops/issues
+* Pull Request : https://github.com/aert/aert-devops/pulls
 
 Those who wish to contribute directly to the project can contact me at devaert@gmail.com to talk about getting repository access granted.
 
