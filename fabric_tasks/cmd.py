@@ -1,8 +1,4 @@
 from fabric.api import *
-from fabric.contrib.files import comment, uncomment, sed
-from fabtools import require, deb
-from decorators import task_with_pkg_log
-
 
 @task
 def reboot():
@@ -23,11 +19,4 @@ def sudo(cmd):
 def uname():
     "> uname -a"
     run('uname -a')
- 
-@task_with_pkg_log
-def upgrade():
-    "Updates & Upgrades"
-    with settings(hide('stdout')):
-        deb.update_index()
-    deb.upgrade()
 

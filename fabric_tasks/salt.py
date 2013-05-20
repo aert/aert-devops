@@ -7,8 +7,8 @@ from fabric.contrib.project import rsync_project
 
 
 @task_with_pkg_log
-def setup_master_keurgui():
-    ''' Install and configure salt master at @keurgui '''
+def setup_master():
+    ''' Install and configure salt master at specified host '''
     require.deb.packages(['salt-master'])
     require.directory('/srv/salt', owner='aert', use_sudo=True)
 

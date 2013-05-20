@@ -44,14 +44,14 @@ Add Hosts:
 
 .. highlight:: python
 
-  # vim fabfile_local.py
-  from fabric.api import *
-  
-  @task
-  def my_host():
-    "use my_host"
-    env.user = '<USER>'
-    env.hosts = ['<HOST>']
+     # vim fabfile_local.py
+     from fabric.api import *
+     
+     @task
+     def my_host():
+       "use my_host"
+       env.user = '<USER>'
+       env.hosts = ['<HOST>']
  
 Start using::
  

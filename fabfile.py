@@ -5,8 +5,3 @@ from fabric_tasks import setup, secure, apt
 from fabric_tasks import ssh, cmd, salt
 import fabfile_local as h
 
-@task
-def uname():
-  "> uname -a"
-  run('uname -a')
-  
