@@ -23,6 +23,7 @@ Master Deps
  
 * Fabric
 * FabTools for package requirement
+* EncFS (optional)
  
 Slaves Deps
 ===========
