@@ -1,3 +1,5 @@
+Fabric Tasks & Salt States
+''''''''''''''''''''''''''
 
 Introduction
 ************
@@ -78,8 +80,9 @@ This project is licensed under the MIT license.
 Support 
 *******
  
-Users looking for support should file an issue on the GitHub issue tracking page (https://github.com/aert/aert_devops/issues), or file a pull request (https://github.com/myuser/aert_devops/pulls) if you have a fix available.
+* Issue Tracking : https://github.com/aert/aert_devops/issues
+* Pull Request : https://github.com/aert/aert_devops/pulls
 
-Those who wish to contribute directly to the project can contact me at <devaert@gmail.com> to talk about getting repository access granted.
+Those who wish to contribute directly to the project can contact me at devaert@gmail.com to talk about getting repository access granted.
 
 
