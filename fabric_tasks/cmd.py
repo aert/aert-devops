@@ -6,12 +6,12 @@ def reboot():
     sudo('reboot')
 
 @task
-def run(cmd):
+def myrun(cmd):
     "runs arbitrary command"
     run(cmd)
 
 @task
-def sudo(cmd):
+def mysudo(cmd):
     "runs arbitrary sudo command"
     sudo(cmd)
 

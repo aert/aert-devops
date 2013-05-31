@@ -12,26 +12,31 @@ def list():
     run('grep security /etc/apt/sources.list > /tmp/security.list')
     run('apt-get upgrade -oDir::Etc::Sourcelist=/tmp/security.list -s | grep -v ^Conf')
 
-@task
 def update():
     ''' Update pkg list '''
     sudo('apt-get update')
 
-@task
 def upgrade_security():
     ''' Upgrade only security updates '''
     print(yellow('Security Upgrade :', bold=True))
     run('grep security /etc/apt/sources.list > /tmp/security.list')
     sudo('apt-get upgrade -oDir::Etc::Sourcelist=/tmp/security.list && apt-get update')
 
-@task
 def distupgrade_security():
     ''' Dist-Upgrade only security updates '''
     print(yellow('Security Upgrade :', bold=True))
     run('grep security /etc/apt/sources.list > /tmp/security.list')
     sudo('apt-get dist-upgrade -oDir::Etc::Sourcelist=/tmp/security.list && apt-get update')
 
+def distupgrade_all():
+    ''' Dist-Upgrade'''
+    sudo('apt-get dist-upgrade')
+
 @task
+def update_distupgrade_reboot_all():
+    ''' Dist-Upgrade & Reboot'''
+    sudo('apt-get update && apt-get dist-upgrade && reboot')
+
 def upgrade_all():
     ''' Upgrade all updates '''
     print(yellow('Upgrade All:', bold=True))
