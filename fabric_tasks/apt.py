@@ -35,7 +35,7 @@ def distupgrade_all():
 @task
 def update_distupgrade():
     ''' Dist-Upgrade'''
-    sudo('apt-get update && apt-get dist-upgrade && reboot')
+    sudo('apt-get update && apt-get dist-upgrade')
 
 @task
 def update_distupgrade_reboot():
