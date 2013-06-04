@@ -37,6 +37,11 @@ def update_distupgrade_reboot_all():
     ''' Dist-Upgrade & Reboot'''
     sudo('apt-get update && apt-get dist-upgrade && reboot')
 
+@task
+def update_upgrade_all():
+    ''' Upgrade'''
+    sudo('apt-get update && apt-get upgrade')
+
 def upgrade_all():
     ''' Upgrade all updates '''
     print(yellow('Upgrade All:', bold=True))
