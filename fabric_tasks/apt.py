@@ -33,16 +33,21 @@ def distupgrade_all():
     sudo('apt-get dist-upgrade')
 
 @task
-def update_distupgrade_reboot_all():
+def update_distupgrade():
+    ''' Dist-Upgrade'''
+    sudo('apt-get update && apt-get dist-upgrade && reboot')
+
+@task
+def update_distupgrade_reboot():
     ''' Dist-Upgrade & Reboot'''
     sudo('apt-get update && apt-get dist-upgrade && reboot')
 
 @task
-def update_upgrade_all():
+def update_upgrade():
     ''' Upgrade'''
     sudo('apt-get update && apt-get upgrade')
 
-def upgrade_all():
+def upgrade():
     ''' Upgrade all updates '''
     print(yellow('Upgrade All:', bold=True))
     sudo('apt-get upgrade && apt-get update')
