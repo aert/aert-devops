@@ -1,3 +1,0 @@
-
-pylint:
-  pkg.installed

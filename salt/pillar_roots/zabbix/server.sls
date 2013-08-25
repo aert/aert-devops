@@ -1,1 +1,0 @@
-zabbix_server_dbpassword: $$zabbix_server_dbpassword
