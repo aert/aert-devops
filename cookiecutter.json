@@ -1,9 +1,0 @@
-{
-    "repo_name"  : "devops",
-
-    "master_host": "host.com",
-    "master_user": "username",
-
-    "minion_host": "host.com",
-    "minion_user": "username"
-}
