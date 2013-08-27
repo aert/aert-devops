@@ -3,9 +3,9 @@ require 'etc'
 
 Vagrant.configure("2") do |config|
   config.vm.define :web do |web|
-    # Ubuntu 12.04
-    web.vm.box = "precise64"
-    web.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    # Puppetlabs Debian 7.0rc1 x86_64, VBox 4.2.10, No Puppet or Chef
+    web.vm.box = "wheezy-rc1"
+    web.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210-nocm.box"
 
     # Network
     web.vm.network :private_network, ip: "192.168.111.223"
