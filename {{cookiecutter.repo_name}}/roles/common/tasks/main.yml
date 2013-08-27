@@ -12,3 +12,7 @@
     - tig
     - byobu
     - build-essential
+
+
+
+- include: security.yml tags=security
