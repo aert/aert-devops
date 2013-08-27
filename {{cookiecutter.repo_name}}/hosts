@@ -1,5 +1,5 @@
-# Master
+[masters]
 {{cookiecutter.master_user}}@{{cookiecutter.master_host}}
 
-# Minion
+[minions]
 {{cookiecutter.minion_user}}@{{cookiecutter.minion_host}}
