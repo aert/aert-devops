@@ -1,0 +1,5 @@
+# Master
+{{cookiecutter.master_user}}@{{cookiecutter.master_host}}
+
+# Minion
+{{cookiecutter.minion_user}}@{{cookiecutter.minion_host}}
