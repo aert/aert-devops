@@ -12,6 +12,7 @@
     - tig
     - byobu
     - build-essential
+    - etckeeper
 
 
 
