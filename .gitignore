@@ -1,4 +1,4 @@
 *.pyc
-/hosts
-/*.inv
+/hosts.*
+/inv.*
 /.vagrant
