@@ -92,4 +92,9 @@ def vim_config(user=''):
     run('git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle')
     run('vim +BundleInstall +qall')
 
-
+@task
+def vagrant():
+    "Set up vagrant"
+    sudo("passwd root")
+    sudo("apt-get update")
+    local("ssh-copy-id root@192.168.111.223")

@@ -1,22 +1,21 @@
-Fabric Tasks & Ansible Configuration
-''''''''''''''''''''''''''''''''''''
+Fabric Tasks & Ansible Playbooks
+''''''''''''''''''''''''''''''''
 
 Introduction
 ************
  
-This is the reporsitory of my Fabric and Salt configuration. 
-
 Notable features :
 
 * Debian packaging : update/list/upgrade
 * Salt : minion setup
 * EncFS : private dir mount/umount/backup
 * Fabric custom decorators
+* Ansible playbooks : Denyhost, Etckeeper, Nginx, ...
 
 Requirements 
 ************
  
-This code has been run and tested on Python 2.7.
+Run and tested on Python 2.7.
 
 Installation
 ************
@@ -25,8 +24,25 @@ Installation
 
      pip install -e requirement.txt
 
+Usage
+*****
+ 
+Ansible
+=======
+
 #. Add Hosts
 #. Launch ansible playbook
+ 
+Fabric
+======
+
+Commands::
+
+  fab -l
+
+Usage::
+
+  fab -H <host1,host2> <command>
 
 Tests 
 *****
@@ -34,17 +50,12 @@ Tests
 #. Start Vagrant::
 
      vagrant up
-     vagrant ssh
 
-#. Upgrade Debian (mandatory)::
+#. Setup with Fabric::
 
-     sudo -i && apt-get update && apt-get dist-upgrade
+     fab h.vagrant setup.vagrant 
 
-#. Quit Vagrant & install your ssh-key to root::
-
-     ssh-copy-id root@192.168.111.223
-
-#. Launch ansible playbook
+#. Launch ansible playbook or Fabric task
 
 More Information 
 ****************
