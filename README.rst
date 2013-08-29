@@ -1,5 +1,5 @@
-Fabric Tasks & Salt States
-''''''''''''''''''''''''''
+Fabric Tasks & Ansible Configuration
+''''''''''''''''''''''''''''''''''''
 
 Introduction
 ************
@@ -18,50 +18,33 @@ Requirements
  
 This code has been run and tested on Python 2.7.
 
-Master Deps 
-===========
- 
-* Fabric
-* FabTools for package requirement
-* EncFS (optional)
- 
-Slaves Deps
-===========
- 
-* Git
-* Salt
-* EtcKeeper
-* Denyhosts
-
 Installation
 ************
  
-Install requirements::
- 
-  pip -e requirement.txt
- 
-Add Hosts:
+#. Install requirements:: 
 
-.. code-block:: python
+     pip install -e requirement.txt
 
-   # vim fabfile_local.py
-   from fabric.api import *
-   
-   @task
-   def my_host():
-     "use my_host"
-     env.user = '<USER>'
-     env.hosts = ['<HOST>']
- 
-Start using::
- 
-  fab -l
+#. Add Hosts
+#. Launch ansible playbook
 
 Tests 
 *****
  
-Salt config can be run in dry-run mode.
-More to come.
+#. Start Vagrant::
+
+     vagrant up
+     vagrant ssh
+
+#. Upgrade Debian (mandatory)::
+
+     sudo -i && apt-get update && apt-get dist-upgrade
+
+#. Quit Vagrant & install your ssh-key to root::
+
+     ssh-copy-id root@192.168.111.223
+
+#. Launch ansible playbook
 
 More Information 
 ****************
@@ -69,23 +52,6 @@ More Information
 * GitHub : http://github.com/aert/aert-devops
 * Documentation : https://github.com/aert/aert-devops/wiki
  
-API Documentation
-=================
- 
-Task list are available through Fabric::
- 
-  fab -l
- 
-TODO : Salt doc
-
-Example Usage
-*************
- 
-The following shows how to list available updates from remote server::
- 
-  fab h_remoteserver apt.update
-  fab h_remoteserver apt.list
-
 License 
 *******
  
@@ -98,5 +64,6 @@ Support
 * Pull Request : https://github.com/aert/aert-devops/pulls
 
 Those who wish to contribute directly to the project can contact me at devaert@gmail.com to talk about getting repository access granted.
+
 
 
