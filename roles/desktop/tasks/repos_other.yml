@@ -1,0 +1,12 @@
+---
+# Other repos.
+
+- name: Add webupd8 ppa
+  apt_repository: repo='ppa:nilarimogard/webupd8' state=present
+
+- name: Install webupd8 pkgs
+  apt: pkg=$item state=installed
+  with_items:
+    - minitube
+    - musique
+    - audacious

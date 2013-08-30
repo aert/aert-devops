@@ -1,0 +1,16 @@
+---
+# Desktop.
+
+- name: Install base Desktop pkgs
+  apt: pkg=$item state=installed
+  with_items:
+    - soundconverter
+    - unrar
+    - terminator
+    - calibre
+    - vim-gtk
+    - arista
+    - pyrenamer
+
+- include: repos_other.yml
+
