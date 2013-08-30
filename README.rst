@@ -22,7 +22,7 @@ Installation
  
 #. Install requirements:: 
 
-     pip install -e requirement.txt
+     $ pip install -e requirement.txt
 
 Usage
 *****
@@ -32,28 +32,36 @@ Ansible
 
 #. Add Hosts
 #. Launch ansible playbook
+
+Exemples
+--------
+
+* Install desktop::
+
+    $ echo "127.0.0.1" > inv.local
+    $ sudo ansible-playbook -i inv.local -c local site_desktop.yml -v
  
 Fabric
 ======
 
-Commands::
+Commands list::
 
-  fab -l
+  $ fab -l
 
 Usage::
 
-  fab -H <host1,host2> <command>
+  $ fab -H <host1,host2> <command>
 
 Tests 
 *****
  
 #. Start Vagrant::
 
-     vagrant up
+     $ vagrant up
 
 #. Setup with Fabric::
 
-     fab h.vagrant setup.vagrant 
+     $ fab h.vagrant setup.vagrant 
 
 #. Launch ansible playbook or Fabric task
 
