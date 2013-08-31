@@ -11,6 +11,8 @@
     - vim-gtk
     - arista
     - pyrenamer
+    - chromium-browser
+    - chromium-browser-l10n
 
 - include: repos_other.yml
 
