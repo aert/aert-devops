@@ -38,8 +38,8 @@ Exemples
 
 * Install desktop::
 
-    $ echo "127.0.0.1" > inv.local
-    $ sudo ansible-playbook -i inv.local -c local site_desktop.yml -v
+    $ cd playbooks
+    $ sudo ansible-playbook -i hosts/localhost -c local site_desktop.yml -v
  
 Fabric
 ======
