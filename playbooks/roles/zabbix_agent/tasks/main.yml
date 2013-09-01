@@ -1,0 +1,28 @@
+---
+
+- name: Zabbix Agent - APT
+  apt: pkg=$item state=installed
+  with_items:
+    - update-notifier-common
+    - zabbix-agent
+  tags: zabbix-agent
+
+- name: Zabbix Agent - set config server
+  lineinfile: dest=/etc/zabbix/zabbix_agentd.conf regexp="^Server=.*" insertafter="^# Server=" line=Server={{ zabbix_server }}
+  notify: restart zabbix-agent
+  tags: zabbix-agent
+
+- name: Zabbix Agent - set config serveractive
+  lineinfile: dest=/etc/zabbix/zabbix_agentd.conf regexp="^ServerActive=.*" insertafter="^# ServerActive=" line=ServerActive={{ zabbix_server }}
+  notify: restart zabbix-agent
+  tags: zabbix-agent
+
+- name: Zabbix Agent - set config Timeout
+  lineinfile: dest=/etc/zabbix/zabbix_agentd.conf regexp="^Timeout=.*" insertafter="^# Timeout=" line=Timeout=10
+  notify: restart zabbix-agent
+  tags: zabbix-agent
+
+- name: Zabbix Agent - set config Hostname
+  shell: sed -i "s/^Hostname=.*$/Hostname=`hostname`/" /etc/zabbix/zabbix_agentd.conf
+  notify: restart zabbix-agent
+  tags: zabbix-agent

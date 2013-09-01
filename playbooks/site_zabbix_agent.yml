@@ -1,0 +1,15 @@
+---
+# This is the top-level playbook that defines our entire infrastructure.
+
+- hosts: all
+  gather_facts: True
+
+  vars_prompt:
+    - name: "zabbix_server"
+      prompt: "Zabbix server IP"
+      private: no
+      default: 127.0.0.1
+
+  roles:
+    - zabbix_common
+    - zabbix_agent
