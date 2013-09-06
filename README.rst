@@ -82,7 +82,7 @@ Support
 * Issue Tracking : https://github.com/aert/aert-devops/issues
 * Pull Request : https://github.com/aert/aert-devops/pulls
 
-Those who wish to contribute directly to the project can contact me at devaert@gmail.com to talk about getting repository access granted.
+Those who wish to contribute directly to the project can contact me at dev.aert@gmail.com to talk about getting repository access granted.
 
 
 
